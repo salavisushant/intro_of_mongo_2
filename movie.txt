@@ -1,0 +1,14 @@
+1. first do all basic things which is necessary to mongodb operate and import some data in compass;
+2.for equal to commands is (db.movie.find({name: {$eq: "Deliverance"}})).
+3.for showing not equal to data command is (db.movie.find({name: {$ne: "Deliverance"}})).
+4.for greter than command which is mainly use for data showing which is greter and also command is-(db.movie.find({budget: {$gt: 1900}})).
+5.gereter than equal to is command for basically use for data which is greater than and equal to and also command is (db.movie.find({budget: {$gte:19900}})).
+6.for less than command is (db.movie.find({budget: {$lt:9500}})).
+7.for less than equal to data command is (db.movie.find({budget: {$lte:9500}})).
+8.for find dta greater than and less than to command is (db.movie.find({$and:[{production_year:{$gte:2000}},{production_year:{$lte:2010}}]}).pretty())
+9.for "And &&" operator command which is used db.movie.find({$and:[{budget:{$gt:10000}},{production_year:{$gt:2000}}]}).pretty().
+10.for "Or ||" operator command which is used db.movie.find({$or:[{budget:{$gt:10000}},{production_year:{$gt:2000}}]}).pretty().
+11. for nor conditions data which is shown neighter greater than budget nor more than year. command is db.movie.find({$nor:[{budget:{$gt:10000}},{production_year:{$gt:2000}}]}).pretty()
+12. for sorting in descending order command is (db.movie.find().sort({production_year:-1,movie_name:-1}));
+13.for data not equal to both values command is (db.movie.find({$or:[{production_year:{$ne:2000}},{budget:{$ne:10000}}]}).pretty()).
+14.for skipping first 10 query and then fetch 5 data command is (db.movie.find().skip(10).limit(5).pretty());
